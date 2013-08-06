@@ -8,7 +8,9 @@ $form = '
               <INPUT type="text" name="firstname" id="firstname"><BR>
     <LABEL for="lastname">Last name: </LABEL>
               <INPUT type="text" name="lastname" id="lastname"><BR>
-    <LABEL for="email">email: </LABEL>
+    <LABEL for="address">Address: </LABEL>
+              <INPUT type="text" name="address" id="address"><BR>
+    <LABEL for="email">Email: </LABEL>
               <INPUT type="text" name="email" id="email"><BR>
     <INPUT type="radio" name="sex" value="Male"> Male<BR>
     <INPUT type="radio" name="sex" value="Female"> Female<BR>
@@ -20,7 +22,7 @@ $form = '
     echo $form;
   } else {
 
-    echo 'Thank you and this is what you sent: <br>';
+    echo '<br> <br> Thank you, <br> This is what you sent: <br> <br>';
      foreach($_POST as $key => $value) {
        echo $key . ': ' . $value . '<br>';
      }
