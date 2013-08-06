@@ -1,4 +1,14 @@
-<?php echo 'Request method: ' . $_SERVER['REQUEST_METHOD'];
+<?php
+
+session_start(); 
+
+    if(isset($_SESSION['count'])) {
+       $_SESSION['count'] = $_SESSION['count'] + 1;
+    } else {
+       $_SESSION['count'] = 1;
+      }
+
+  echo 'Page # ' . $_SESSION['count'];
 
 
 $form = '
